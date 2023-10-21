@@ -55,7 +55,7 @@ function showTemperature(response) {
   let cityElement = response.data.name;
   let iconElement = response.data.weather[0].main;
 
-  let displayCity = document.querySelector("#city-search");
+  let displayCity = document.querySelector("#city-element");
   let displayTemp = document.querySelector("#temperature");
   let dipslayHumidity = document.querySelector("#current-humidity");
   let displayWind = document.querySelector("#current-wind");
