@@ -59,6 +59,7 @@ ul.list {
   background-color: rgba(248, 249, 250);
   flex-wrap: wrap;
   font-family: sSFMono-Regular, Menlo, Monaco;
+  width: 74px !important;
 }
 button:hover {
   opacity: 0.9;
