@@ -21,7 +21,7 @@ h3.innerHTML = `${day} ${hours}:${minutes}`;
 
 //
 function searchForm(search) {
-  let units = "imperial";
+  let units = "metric";
   let apiKey = "6f5688286a7b5cd7f89135c7b3cafe9f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${search}&APPID=${apiKey}&units=${units}`;
 
@@ -34,7 +34,7 @@ function getSubmit(event) {
   //search = search.trim();
   //search = search.toLowerCase();
 
-  let units = "imperial";
+  let units = "metric";
   let apiKey = "6f5688286a7b5cd7f89135c7b3cafe9f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${search}&APPID=${apiKey}&units=${units}`;
 
@@ -66,7 +66,7 @@ function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
 
   displayCity.innerHTML = `${city}`;
-  displayTemp.innerHTML = `${temp} °F`;
+  displayTemp.innerHTML = `${temp}`;
   dipslayHumidity.innerHTML = `Humidity: ${humidity}%`;
   displayWind.innerHTML = `Wind: ${wind} mph`;
   displayDescription.innerHTML = `${description}`;
@@ -85,7 +85,7 @@ function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
 
-  let units = "imperial";
+  let units = "metric";
   let apiKey = "6f5688286a7b5cd7f89135c7b3cafe9f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${apiKey}&units=${units}`;
 
