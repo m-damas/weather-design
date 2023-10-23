@@ -46,7 +46,20 @@ ul.list {
 .temperature {
   font-size: 50px;
 }
-
+a {
+  text-decoration: none;
+}
+.units {
+  position: relative;
+  bottom: 22px;
+}
+.units .active {
+  color: black;
+  cursor: default;
+}
+.units .active:hoover {
+  text-decoration: none;
+}
 .btn-current {
   position: relative;
   margin-left: 345px;
