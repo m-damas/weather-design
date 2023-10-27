@@ -20,6 +20,48 @@ let day = days[now.getDay()];
 h3.innerHTML = `${day} ${hours}:${minutes}`;
 
 //
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+<div class="col-2">
+  <div class="card" style="width: 12rem">
+    <img 
+    src="http://openweathermap.org/img/wn/50d@2x.png"
+    alt=""
+    width="42"          
+    />
+    <div class="card-body">
+      <p class="card-text">
+        <div class="forecast-temps">
+        <span class="temp-max">88°</span> <span class="temp-min">69°</span>
+       <br />
+        <span class="forecast-date">${day}</span>
+      </p>
+     </div>
+  </div>
+</div>
+</div>
+`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function searchForm(search) {
   let units = "metric";
   let apiKey = "6f5688286a7b5cd7f89135c7b3cafe9f";
@@ -174,6 +216,8 @@ currentButton.addEventListener("click", getCurrentPosition);
 //
 
 let celsiusTemperature = null;
+
+displayForecast();
 
 let displayFahrenheit = document.querySelector(`#fahrenheit`);
 displayFahrenheit.addEventListener("click", displayFahrenheitTemperature);
