@@ -3,11 +3,24 @@ body {
   min-height: 100vh;
 }
 .weather-app {
-  max-width: 1400px;
+  max-width: 100%;
+  max-height: 100%;
   margin: 30px auto;
   padding: 50px;
   border: 1px solid #d3d3d3;
   border-radius: 12px;
+}
+.weather-app-wrapper {
+  max-width: 1400px;
+  margin: 30px auto;
+}
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.wrapper img {
+  width: 100%;
+  height: auto;
 }
 h1 {
   font-family: "Montserrat", sans-serif;
@@ -32,6 +45,7 @@ img.atlanta-image {
   border-radius: 14px;
 }
 img.weather-icon {
+  display: block;
   max-width: 70px;
   position: absolute;
   top: 295px;
@@ -87,4 +101,24 @@ button:hover {
 }
 .description {
   text-transform: capitalize;
+}
+.weather-forecast {
+  text-align: center;
+}
+.card img {
+  display: block;
+  margin: 5px auto;
+}
+.forecast-date {
+  font-size: 20px;
+  color: darkblue;
+}
+.forecast-temps {
+  font-size: 15px;
+}
+.temp-min {
+  opacity: 0.7;
+}
+.temperature {
+  font-size: 50px;
 }

@@ -53,6 +53,7 @@ function showTemperature(response) {
   let wind = Math.round(response.data.wind.speed);
   let description = response.data.weather[0].description;
   let cityElement = response.data.name;
+  let icon = response.data.weather[0].icon;
 
   let displayCity = document.querySelector("#city-element");
   let displayTemp = document.querySelector("#temperature");
@@ -70,12 +71,64 @@ function showTemperature(response) {
   displayWind.innerHTML = `Wind: ${wind} mph`;
   displayDescription.innerHTML = `${description}`;
   displayCityElement.innerHTML = `${cityElement}`;
+
+  displayIconElement.setAttribute("src", switchIcon(icon));
   displayIconElement.setAttribute(
-    "src",
+    "alt",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
   console.log(response);
+}
+function switchIcon(icon) {
+  switch (icon) {
+    case "01d":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/811/original/sun.png?1695302792";
+      break;
+    case "01n":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/029/original/night_%281%29.png?1697547173";
+      break;
+    case "02d":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/114/original/few_cloud.png?1697107645";
+    case "04d":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/114/original/few_cloud.png?1697107645";
+      break;
+    case "03d":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/113/original/clouds.png?1697107638";
+      break;
+    case "02n":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/028/original/darkness.png?1697547158";
+    case "04n":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/028/original/darkness.png?1697547158";
+    case "03n":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/028/original/darkness.png?1697547158";
+    case "09d":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/111/original/rainy_%281%29.png?1697107612";
+    case "10d":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/111/original/rainy_%281%29.png?1697107612";
+      break;
+    case "09n":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/031/original/nightrain_%281%29.png?1697547648";
+    case "10n":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/031/original/nightrain_%281%29.png?1697547648";
+      break;
+    case "11d":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/112/original/thunder.png?1697107627";
+      break;
+    case "11n":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/030/original/thunder_%281%29.png?1697547183";
+      break;
+    case "13d":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/116/original/snow.png?1697108437";
+    case "13n":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/116/original/snow.png?1697108437";
+      break;
+    case "50d":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/234/original/misty.png?1697163791";
+    case "50n":
+      return "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/234/original/misty.png?1697163791";
+      break;
+  }
 }
 
 let form = document.querySelector("#city-search");
