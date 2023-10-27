@@ -23,6 +23,7 @@
   <body>
     <div class="container">
      <div class= "weather-app">
+      <div class= "weather-app-wrapper">
       <nav class="navbar">
         <div class="container-fluid">
           <form class="d-flex" role="search" id="city-search">
@@ -52,7 +53,9 @@
           <a href="#" id="fahrenheit">°F</a></span>
           </span></h2>
       </div>
+      <div class="wrapper">
       <img class="atlanta-image" src="atlanta.jpg" alt="atlanta">
+      </div>
      <div class= "col-6">
       <ul class="list">
         <li class = "description" id="current-description">Description: Sunny</li>
@@ -60,7 +63,7 @@
         <li id ="current-wind">Wind: 10%</li>
       </ul>
       </div>
-      <div class="d-flex"
+      <div class="wrapper d-flex"
       ><img 
       src="sun.png"  
       alt="clear"  
@@ -68,74 +71,30 @@
       class="weather-icon"/>
     </div>
 
+    <div class="weather-forecast id="forecast">
       <div class="row">
-        <div class="col-sm-2">
+        <div class="col-2">
           <div class="card" style="width: 12rem">
-            <span class="icon">🌞</span>
+            <img 
+            src="http://openweathermap.org/img/wn/50d@2x.png"
+            alt=""
+            width="42"          
+            />
             <div class="card-body">
               <p class="card-text">
-                88&deg; 69&deg;
+                <div class="forecast-temps">
+                <span class="temp-max">88°</span> <span class="temp-min">69°</span>
                 <br />
-                Tuesday
+                <span class="forecast-date">Tuesday</span>
               </p>
             </div>
-          </div>
-        </div>
-
-        <div class="col-sm-2">
-          <div class="card" style="width: 12rem">
-            <span class="icon">🌦️</span>
-            <div class="card-body">
-              <p class="card-text">
-                92&deg; 72&deg;
-                <br />
-                Wednesday
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-2">
-          <div class="card" style="width: 12em">
-            <span class="icon">☁️</span>
-            <div class="card-body">
-              <p class="card-text">
-                90&deg; 70&deg;
-                <br />
-                Thursday
-              </p>
-            </div>
-          </div>
-        </div>
-      
-
-      <div class="col-sm-2">
-        <div class="card" style="width: 12em">
-          <span class="icon">⛈️</span>
-          <div class="card-body">
-            <p class="card-text">
-              95&deg; 78&deg;
-              <br />
-              Friday
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-3">
-        <div class="card" style="width: 12rem">
-          <span class="icon">🌪️</span>
-          <div class="card-body">
-            <p class="card-text">
-              78&deg; 66&deg;
-              <br />
-              Saturday
-            </p>
           </div>
         </div>
       </div>
     </div>
     </div>
+  </div>
+</div>
      <br/>
     <p>
       <a href="https://github.com/m-damas/weather-design"> <b>Open-source code</b> </a>by Melissa Damas
