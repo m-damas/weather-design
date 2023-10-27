@@ -49,57 +49,97 @@
       <h2 class="flo"><span class="temperature" id ="temperature">78</span>
         <span class = "units">
           <a href="#" id="celsius" class="active">°C</a> | 
-          <a href="#" id="fahrenheit">°F</a>
+          <a href="#" id="fahrenheit">°F</a></span>
           </span></h2>
       </div>
-
-      <div class="wrapper">
-      <img class="atlanta-image" src="weather-design/atlanta.jpg" alt="atlanta">
-      </div>
+      <img class="atlanta-image" src="atlanta.jpg" alt="atlanta">
      <div class= "col-6">
       <ul class="list">
         <li class = "description" id="current-description">Description: Sunny</li>
         <li id="current-humidity">Humidity: 60%</li>
         <li id ="current-wind">Wind: 10%</li>
       </ul>
-    </div>
-      <div class="wrapper d-flex"
+      </div>
+      <div class="d-flex"
       ><img 
-      src="weather-design/sun.png"  
+      src="sun.png"  
       alt="clear"  
       id="icon" 
       class="weather-icon"/>
     </div>
 
-      <div class="weather-forecast id="forecast">
       <div class="row">
-        <div class="col-2">
+        <div class="col-sm-2">
           <div class="card" style="width: 12rem">
-            <img 
-            src="http://openweathermap.org/img/wn/50d@2x.png"
-            alt=""
-            width="42"          
-            />
+            <span class="icon">🌞</span>
             <div class="card-body">
               <p class="card-text">
-                <div class="forecast-temps">
-                <span class="temp-max">88°</span> <span class="temp-min">69°</span>
-               <br />
-                <span class="forecast-date">Tuesday</span>
+                88&deg; 69&deg;
+                <br />
+                Tuesday
               </p>
-             </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card" style="width: 12rem">
+            <span class="icon">🌦️</span>
+            <div class="card-body">
+              <p class="card-text">
+                92&deg; 72&deg;
+                <br />
+                Wednesday
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card" style="width: 12em">
+            <span class="icon">☁️</span>
+            <div class="card-body">
+              <p class="card-text">
+                90&deg; 70&deg;
+                <br />
+                Thursday
+              </p>
+            </div>
+          </div>
+        </div>
+      
+
+      <div class="col-sm-2">
+        <div class="card" style="width: 12em">
+          <span class="icon">⛈️</span>
+          <div class="card-body">
+            <p class="card-text">
+              95&deg; 78&deg;
+              <br />
+              Friday
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card" style="width: 12rem">
+          <span class="icon">🌪️</span>
+          <div class="card-body">
+            <p class="card-text">
+              78&deg; 66&deg;
+              <br />
+              Saturday
+            </p>
           </div>
         </div>
       </div>
     </div>
     </div>
-    </div>
-  </div>
-    <br/>
+     <br/>
     <p>
-      <a href="https://github.com/m-damas/weather-design" target="_blank"> <b>Open-source code</b> </a>by Melissa Damas
+      <a href="https://github.com/m-damas/weather-design"> <b>Open-source code</b> </a>by Melissa Damas
     </p>
-  </div>
     <script src="index.js"></script>
     </body>
 </html>
