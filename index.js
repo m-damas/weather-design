@@ -123,7 +123,7 @@ function showTemperature(response) {
   displayCity.innerHTML = `${city}`;
   displayTemp.innerHTML = `${temp}`;
   dipslayHumidity.innerHTML = `Humidity: ${humidity}%`;
-  displayWind.innerHTML = `Wind: ${wind} mph`;
+  displayWind.innerHTML = `Wind: ${wind} km/h`;
   displayDescription.innerHTML = `${description}`;
   displayCityElement.innerHTML = `${cityElement}`;
 
