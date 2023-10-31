@@ -27,7 +27,6 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-//
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -38,19 +37,17 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-<div class="col-2">
-  <div class="card" style="width: 12rem">
-    <img 
-    src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
-    alt=""
-    width="42"          
-    />
-    <div class="card-body">
-      <p class="card-text">
-        <div class="forecast-temps">
-        <span class="temp-max">${Math.round(
-          forecastDay.temp.max
-        )}°</span> <span class="temp-min">${Math.round(
+      <div class="col-2">
+        <div class="card" style="width: 12rem">
+         <img src="http://openweathermap.org/img/wn/${
+           forecastDay.weather[0].icon
+         }@2x.png"alt=""width="42"/>
+         <div class="card-body">
+           <p class="card-text">
+           <div class="forecast-temps">
+            <span class="temp-max">${Math.round(
+              forecastDay.temp.max
+            )}°</span> <span class="temp-min">${Math.round(
           forecastDay.temp.min
         )}°</span>
        <br />
@@ -59,7 +56,7 @@ function displayForecast(response) {
      </div>
   </div>
 </div>
-
+</div>
 `;
     }
   });
@@ -90,7 +87,7 @@ function getSubmit(event) {
   //search = search.toLowerCase();
 
   let units = "metric";
-  let apiKey = "6f5688286a7b5cd7f89135c7b3cafe9f";
+  let apiKey = "f5029b784306910c19746e40c14d6cd3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${search}&APPID=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(showTemperature);
@@ -133,6 +130,7 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
+  getForecast(response.data.coord);
   console.log(response);
 }
 function switchIcon(icon) {
